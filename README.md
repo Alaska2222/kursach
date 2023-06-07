@@ -1,1 +1,1 @@
-# This is an kursova job for web-design subject
+# Static pages for SPA "Student`s raiting"
