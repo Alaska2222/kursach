@@ -1,0 +1,384 @@
+ 
+#profile-title {
+	color: #555;
+	font-weight: 400;
+	font-size: 50px;
+	margin-top: 60px;
+	text-align: left;
+  }
+  
+.bio-block h3 {
+	color: #333;
+	font-weight: 400;
+	font-size: 30px;
+  }
+  
+.wrapper {
+	display: flex;
+	margin-bottom: 40px;
+	text-align: center;
+
+}
+.wrapper-admin {
+	display: flex;
+	margin-bottom: 40px;
+	text-align: center;
+  }
+  
+  .bio-block {
+	float: left;
+	width: 400px;
+	height: 850px;
+	margin-right: 10px; 
+  }
+  
+  .stats-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: absolute; 
+	bottom: 2rem;
+	width: 95%;
+  }
+  
+  .diagram {
+	width: 500px;
+	height: 300px;
+	margin-right: 10px;
+  }
+  
+  
+  .bio-block, .grades-block, .journal-block{
+	background-color: #f8f9fa;
+	border: 1px solid #dee2e6;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 15px 25px
+  }
+  
+  .grades-block {
+	width: 80%;
+	position: relative;
+	justify-content: center;
+	overflow-y: auto; 
+	overflow-x: hidden;
+  }
+  
+  .table-block table {
+	box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+	position: relative;
+	width: 100%; 
+	height: 300px;
+	text-align: left;
+	margin: 0 auto; 
+	border-collapse: collapse;
+  }
+  .table-block {
+	max-height: 450px; 
+	overflow-y: scroll;
+	border: #2a2929 1px solid;
+	border-radius: 4px;
+  }
+  
+  .table-block table thead{
+	position: sticky;
+	top: 0;
+  }
+  .table-block table th,
+  .table-block table  td {
+	padding: 0.75rem;
+	vertical-align: top;
+  }
+  
+  .table-block table  td:hover{
+	background-color: #7a7a7a7b;
+  }
+  
+  .table-block table th {
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	background-color: white;
+  }
+  
+  .table-block table td {
+	text-align: center;
+	color: #333333;
+	font-weight: 400;
+	font-size: 18px;
+  }
+  
+  .table-block table tr:nth-child(odd) {
+	background-color: #7db7edd1;
+  }
+  
+  .table-block table tr:nth-child(even) {
+	background-color: #f5f5f58e;
+  }
+  
+  .table-block table th a.sort-by {
+	padding-right: 18px;
+	position: relative;
+  }
+  
+  .inputs-block {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+  }
+  
+  .inputs-block .input {
+	color: black;
+	font-weight: 400;
+	font-size: 16px;
+	padding: 20px 10px;
+	height: 42px;
+	min-width: 270px;
+	border: none;
+	border-top: solid 1px #555;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  
+  .inputs-block .input:focus {
+	outline: none;
+  }
+  
+  .inputs-block .bio-input {
+	position: relative;
+	padding-top: 25px ;
+  }
+  
+  .inputs-block #bio-invalid input{
+	box-shadow: 4px 2px 6px rgb(192, 8, 8)
+ }
+  
+  .inputs-block .bio-input label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-left: 2.5rem;
+	color: #333;
+  }
+  
+  .button-group {
+	display: flex;
+	flex-direction: row;
+	padding: 1rem 0;
+	justify-content: center;
+	column-gap: 60px;
+	
+  }
+  
+  .button-group #update-btn, .button-group #delete-btn{
+	color: white;
+	font-weight: 250;
+	font-size: 20px;
+	position: relative;
+	padding: .75rem 1.25rem;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	border-radius: 10rem;
+	transition: all .3s;
+	overflow: hidden;
+	z-index: 1;
+  }
+  
+  .button-group #update-btn:after, .button-group #delete-btn:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10rem;
+	z-index: -2;
+  }
+  .button-group #update-btn:after{
+	background-color: rgba(41, 124, 219, 0.875);
+  }
+  .button-group #delete-btn:after{
+	background-color: rgba(239, 64, 64, 0.875);
+  }
+  .button-group #update-btn:before, .button-group #delete-btn:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	transition: all .3s;
+	border-radius: 10rem;
+	z-index: -1;
+  }
+  
+  .button-group #update-btn:before{
+	background-color: rgba(4, 44, 91, 0.875);
+  }
+  .button-group #delete-btn:before{
+	background-color: rgba(124, 3, 3, 0.875);
+  }
+  
+  
+  .button-group #update-btn:hover:before, .button-group #delete-btn:hover:before{
+	width: 100%;
+  }
+
+
+  a.sort-by:before,
+  a.sort-by:after {
+	border: 5px solid transparent;
+	content: "";
+	display: block;
+	height: 0;
+	right: 5px;
+	top: 50%;
+	position: absolute;
+	width: 0;
+  }
+  
+  a.sort-by:before {
+	border-bottom-color: #333;
+	margin-top: -9px;
+  }
+  
+  a.sort-by:after {
+	border-top-color: #333;
+	margin-top: 1px;
+  }
+  
+  a.sort-by:link,
+  a.sort-by:visited,
+  a.sort-by:hover,
+  a.sort-by:active {
+	color: #333;
+	text-decoration: none;
+  }
+
+
+.error-container h3{
+	font-size:50px;
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+  }
+.error-container p{
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	}
+	
+.error-container{
+	width:100%;
+	
+}
+
+.error-container h1{
+	font-size: 80px;
+	font-weight:800;
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.error-container p a {
+    text-decoration: none;
+    color: rgba(51, 51, 51, 0.786);
+  }
+  
+  .error-container p a:hover {
+    color: rgba(41, 124, 219, 0.875);
+  }
+
+.search-bar-container {
+	padding: 20px 100px;
+	
+}
+.journal-block {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+.input-wrapper {
+	background-color: white;
+	width: 30%;
+	border-radius: 10px;
+	height: 2.5rem;
+	padding: 0 15px;
+	box-shadow: 0 0 8px #ddd;
+	display: flex;
+	align-items: center;
+}
+
+.input-wrapper input {
+	background-color: transparent;
+	border: none;
+	font-size: 1.25rem;
+	width: 100%;
+	margin-left: 5px;
+}
+.input-wrapper input:focus {
+	outline: none;
+}
+#search-icon{
+	color: #333;
+}
+
+.result-list{
+	width: 35%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 8px #ddd ;
+	border-radius: 10px;
+	margin-top: 1rem;
+	max-height: 200px;
+	overflow-y: scroll;
+	
+}
+.search-result{
+	padding: 10px 20px;
+}
+
+.search-result:hover{
+	background-color: #efefef;
+}
+
+#user-logo{
+	width: 250px;
+	height: 250px;
+}
+
+#admin-logo{
+	width: 300px;
+	height: 280px;
+}
+
+.table-nui-container
+{
+    width: 100%;
+    float: right;
+}
+
+select{
+	color: black;
+	font-weight: 400;
+	font-size: 16px;
+	width: 80%;
+	height: 100%;
+	margin-left: 2.1rem;
+	margin-top: 1rem;
+	padding: 12px 10px;
+	min-width: 270px;
+	border: none;
+	border-top: solid 1px #555;
+	border-radius: 4px;
+	box-sizing: border-box;
+	
+}
+
+select:focus {
+	outline: none;
+  }
+

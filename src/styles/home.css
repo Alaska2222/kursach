@@ -1,0 +1,42 @@
+
+main {
+  text-align: center;
+  padding: 1em;
+}
+
+main h3 {
+  color: #555;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+main p {
+  color: #555;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1rem;
+}
+
+main ul {
+  list-style: none;
+}
+
+.image-block {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+
+.image-block .image img {
+  width: 60%;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, #2a2929, #044aa4);
+  border-image-slice: 1;
+  box-shadow: 5px 5px 10px black;
+}
+
+.image-block .image img:hover {
+  animation: zoom-in 0.85s;
+}
