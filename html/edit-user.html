@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edit User</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/histogram_icon.png">
+  <link rel="stylesheet" href="/scss/user-page.css">
+  <script src="/js/logout.js" defer></script>
+  <script src="/js/edit-user.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <div class="nav-links">
+        <a href="/html/home-page.html" target="_self">Home</a>
+        <a href="/html/login-page.html" target="_self" id="login-a">Login</a>
+        <a href="/html/login-page.html" target="_self" id="user-a">User Profile</a>
+        <a href="/html/teachers-page.html" target="_self">Our Teachers</a>
+      </div>
+    </div>
+</header>
+      <h1><span class="highlight">Edit {user} page</span></h1>
+    <table class="user-info">
+      <tr>
+        <th>Username: </th>
+        <td><input class="input" required placeholder="Username" type="text" name="username" id="username" autocomplete="off"></td>
+    </tr>
+    <tr>
+      <th>Password: </th>
+      <td><input class="input" required placeholder="Password" type="password" name="password" id="password" autocomplete="off"></td>
+  </tr>
+      <tr>
+        <th>First name: </th>
+        <td>
+        <input class="input" required placeholder="First Name" type="text" name="name" id="name" autocomplete="off">
+        </td>
+    </tr>
+    <tr>
+        <th>Surname: </th>
+        <td><input class="input" required placeholder="Surname" type="text" name="surname" id="surname" autocomplete="off"></td>
+    </tr>
+    <tr>
+        <th>Age: </th>
+        <td><input class="input" required placeholder="Age" type="number" name="age" id="age" autocomplete="off"></td>
+    </tr>
+    <tr>
+      <th>Phone: </th>
+      <td><input class="input" required placeholder="Phone" type="tel" name="phone" id="phone" autocomplete="off"></td>
+    </tr>
+    <tr>
+      <th>E-mail: </th>
+      <td><input class="input" required placeholder="E-mail" type="email" name="email" id="email" autocomplete="off"></td>
+    </tr>
+    </table>
+
+    <div class ="button-group">
+    <button id="submit">Confirm</button>
+    <button id="cancel">Cancel</button>
+    </div>
+  </body> 
+</html>

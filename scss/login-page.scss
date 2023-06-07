@@ -1,0 +1,150 @@
+@import "./resets.scss";
+
+body{
+  font-family: $font-family;
+  margin: 0;
+}
+label {
+  font-size: 12px;
+  opacity:  .8;
+}
+.nav {
+  background-color: $primary-color;
+  z-index: 10000;
+}
+
+h3 {
+  @include standart-font(400, 18px, $tertiary-color);
+  a{
+    text-decoration: none;
+    color: change-opacity($primary-color, 0.5);
+    &:hover{
+      color: $main-blue;
+    }
+  }
+}
+.form-block {
+  display: flex; 
+  flex-direction: row; 
+  margin: 5rem auto; 
+  width: 50%; 
+  height: auto;
+  background: $form-main; 
+  border-radius: 4px; 
+  box-shadow: 0px 2px 6px -1px $shadow-color;
+
+  form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px; 
+    .input {
+      @include standart-font(400, 16px, $shadow-color);
+      padding: 20px 0px; 
+      height: 55px; 
+      min-width: 280px; 
+      border: none; 
+      border-bottom: solid 1px $secondary-color; 
+      box-sizing: border-box; 
+      transition: all .3s linear;     
+      &:focus {
+        outline: none; 
+      }
+    }
+
+    .floating-label {
+      position: relative; 
+      margin-bottom: 10px;
+      z-index: 1;
+      
+      label {
+        position: absolute; 
+        top: calc(50% - 7px);
+        left: 0; 
+        opacity: 0; 
+        transition: all .3s ease; 
+      }
+      
+      input:not(:placeholder-shown) {
+        padding: 28px 0px 12px 0px; 
+      }
+      
+      input:not(:placeholder-shown) + label {
+        transform: translateY(-10px); 
+        opacity: .7; 
+      }
+    }
+  }
+
+  .left {
+    width: 220px; 
+    height: auto; 
+    min-height: 100%; 
+    position: relative; 
+    background-image: linear-gradient($main-blue, $border-end, $shadow-color);
+    background-size: cover;
+    border-top-left-radius: 4px; 
+    border-bottom-left-radius: 4px; 
+  }
+
+  .radio-buttons {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    label {
+      @include standart-font(400, 17px, $primary-color);
+    }
+  }
+
+  #show-group, #show-subject {
+    display: none;
+    padding-bottom: 1rem
+  }
+
+  button {
+    @include standart-font(400, 20px, $quantiary-color);
+    @include standart-button($main-blue);
+  }
+
+  .dropdown-content {
+    display: none;
+    z-index: 1;
+
+    a {
+      padding-bottom: 10px;
+      padding-top: 5px;
+      text-decoration: none;
+      color: $tertiary-color;
+      
+      &:visited {
+        color: $tertiary-color;
+      }
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .dropdown:hover  {
+    .dropdown-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .form-block {
+      width: 80%;
+    }
+    
+    form {
+      .input {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  }
+}

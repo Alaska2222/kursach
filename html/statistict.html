@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Statistics</title>
+  <link rel="icon" type="image/x-icon" href="/images/histogram_icon.png">
+  <link rel="stylesheet" href="/scss/statistic.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/logout.js" defer></script>
+  <script src="/js/stats.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/html/home-page.html" target="_self">Home</a>
+        <a href="/html/login-page.html" target="_self" id="login-a">Login</a>
+        <a href="/html/login-page.html" target="_self" id="user-a">User Profile</a>
+        <a href="/html/teachers-page.html" target="_self">Our Teachers</a>
+      </div>
+    </div>
+</header>
+    <h1><span class="highlight">Here is your statistics</span></h1>
+    <div class="container"> 
+    <div class="member">
+        <canvas id="chart1"></canvas>
+    </div>
+    <div class="member">
+      <canvas id="chart2"></canvas>
+  </div>
+  </div>
+  <div class="center-dia">
+    <canvas id="chart3"></canvas>
+</div>
+
+</body>
+</html>

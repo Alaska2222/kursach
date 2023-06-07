@@ -1,0 +1,39 @@
+@import "./resets.scss";
+
+body {
+  font-family: $font-family;
+  margin: 0;
+}
+
+.nav {
+    background-color: $primary-color;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  #chart1,  #chart2, #chart3{
+    width: fit-content;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .member {
+    width: 800px;
+  }
+  
+  .center-dia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  
+  #chart3 {
+    width: 80%;
+    height: 100%;
+  }
+ 

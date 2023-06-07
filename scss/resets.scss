@@ -1,0 +1,171 @@
+$primary-color: #333;
+$secondary-color: #555;
+$tertiary-color: #777;
+$quantiary-color: white;
+$border-start: #2a2929;
+$border-end: #044aa4;
+$main-blue: rgba(41, 124, 219, 0.875);
+$secondary-blue: rgba(0, 34, 114, 0.695);
+$shadow-color: black;
+$highlight-color: rgba(34, 133, 255, 0.496);
+$font-family: 'Inter';
+$form-main: #fefefe;
+$form-secondary: #f8f9fa;
+$border-main: #dee2e6;
+
+@mixin standart-font($weight, $size, $color: $quantiary-color){
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+
+@keyframes zoom-in {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  @function change-opacity($color, $opacity) {
+    @return rgba($color, $opacity);
+  }
+
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: $quantiary-color;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: $form-secondary;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: change-opacity($border-start,0.3 );
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: fixed;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: $primary-color;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid $primary-color;
+    }
+    .nav > .nav-links {
+      position: fixed;
+      display: block;
+      width: 100%;
+      background-color: $tertiary-color;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+  @mixin standart-button($color) {
+    position: relative; 
+    padding: .75rem 1.25rem;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .3s;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color;
+      border-radius: 10rem;
+      z-index: -2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken($color, 20%);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  h1 {
+    @include standart-font(400,50px ,$secondary-color);
+    .highlight{
+      background:linear-gradient(180deg, transparent 60%, $highlight-color 60%);
+    }
+  }
