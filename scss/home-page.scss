@@ -1,0 +1,61 @@
+@import "./resets.scss";
+
+body {
+  font-family: $font-family;
+  margin: 0;
+}
+
+.info {
+  text-align: center;
+  padding: 1.5em;
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    @include standart-font(400, 20px, $secondary-color);
+  }
+
+  p {
+    @include standart-font(400, 17px, $secondary-color);
+    line-height: 1.5em;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+.nav {
+  background-color: $primary-color;
+}
+.image-block {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 25px;
+
+  .member img {
+    width: 60%;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, $border-start, $border-end);
+    border-image-slice: 1;
+    box-shadow: 5px 5px 10px $shadow-color;
+
+    &:hover {
+      animation: zoom-in 0.8s;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

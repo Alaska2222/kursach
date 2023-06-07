@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/histogram_icon.png">
+    <link rel="stylesheet" href="/scss/login-page.css">  
+    <script src="/js/login.js" defer ></script>  
+    <script src="/js/logout.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/html/home-page.html" target="_self">Home</a>
+        <a href="/html/login-page.html" target="_self" id="login-a">Login</a>
+        <a href="/html/login-page.html" target="_self" id="user-a">User Profile</a>
+        <a href="/html/teachers-page.html" target="_self">Our Teachers</a>
+      </div>
+    </div>
+</header>
+    <div class="form-block">
+      <block class="left"></block>
+      <form method="#" class="log-in" autocomplete="off"> 
+        <h1><span class="highlight">Login page</span></h1>
+        <div class="floating-label">
+          <input class="input" required placeholder="Username" type="text" name="username" id="username" autocomplete="off">
+          <label for="username">Username:</label>
+        </div>
+        <div class="floating-label">
+          <input class="input" required placeholder="Password" type="password" name="password" id="password" autocomplete="off">
+          <label for="password">Password:</label>
+        </div>
+        <div class="radio-buttons">
+            <input type="radio" class="role" id="student" name="role" value="user" checked>
+            <label for="user" >Student</label>
+            <input type="radio" class="role"  id="teacher" name="role" value="admin">
+            <label for="admin">Teaher</label>
+        </div>
+        <h3>Don`t have an account yet? <a href="/html/register-page.html" target="_self">Sign up!</a></h3>
+        <button type="submit" id="login-btn">Log in</button>
+      </form>
+    </div>
+  </body>
+</html>

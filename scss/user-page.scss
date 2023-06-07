@@ -1,0 +1,121 @@
+@import "./resets.scss";
+
+body {
+    margin-top: 5%;
+    text-align: center;
+    font-family: $font-family;
+    margin: 0;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 60%;
+    background-color: $quantiary-color;
+    color: $primary-color;
+    border-color: $border-start $border-end $border-end $border-start;
+    box-shadow: 0 0 10px $shadow-color;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid $secondary-color;
+  }
+
+  th {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background-color: $quantiary-color;
+    border-bottom: 2px solid $primary-color;
+  }
+
+  td {
+    text-align: center;
+    @include standart-font(400, 18px, $primary-color);
+  }
+
+  .user-info{
+     tr:nth-child(odd) {
+    background-color: $tertiary-color;
+   }
+  }
+
+  .admin-info{
+    tr:nth-child(even) {
+   background-color: $tertiary-color;
+  }
+ }
+ 
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 0;
+    column-gap: 100px;
+      #edit-user-button, #delete-user-button, #marks-button, #submit, #cancel{
+        @include standart-font(250, 20px, $quantiary-color );
+        @include standart-button($main-blue);
+      }
+      #stat-button{
+        @include standart-font(250, 20px, $quantiary-color );
+        @include standart-button($primary-color);
+      }
+  }
+
+  @media (max-width: 767px) {
+    table {
+      width: 100%;
+    }
+  
+    th,
+    td {
+      padding: 0.5rem;
+      font-size: 14px;
+    }
+  
+    .button-group {
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 10px;
+      button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    table {
+      width: 80%;
+    }
+  
+    .button-group {
+      flex-direction: row;
+      column-gap: 50px;
+      button {
+        font-size: 20px;
+        padding: 12px 24px;
+      }
+    }
+  }
+
+input {
+  float: left;
+  width: 50%;
+  font-size: 18px;
+  border-radius: 4px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav {
+  background-color: $primary-color;
+}
+

@@ -1,0 +1,63 @@
+@import "./home-page.scss";
+
+body{
+  text-align: right;
+  margin: 0;
+}
+
+.teacher-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 900px;
+  gap: 10px;
+}
+.teacher-list>*{
+    flex: 1 1 160px;
+}
+.teacher {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: calc(50% - 10px);
+    background-color: $form-secondary;
+    border: 1px solid $border-main;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px change-opacity($shadow-color, 0.1);
+    padding: 15px 25px;
+  .key{
+    text-align: left;
+    @include standart-font(400, 18px, $primary-color);
+  }
+  .value {
+    text-align:justify;
+    @include standart-font(400, 18px, $secondary-color);
+  }
+  align-items: end;
+}
+
+h1 {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+h3 {
+    @include standart-font(450, 20px, $shadow-color);
+    position: relative;
+    &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, $main-blue, $border-end, $border-start);
+    }
+}
+
+
+
+ 
+  

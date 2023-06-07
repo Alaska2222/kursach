@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/histogram_icon.png">
+  <link rel="stylesheet" href="/scss/user-page.css">
+  <script src="/js/user.js" defer></script>
+  <script src="/js/delete-user.js" defer></script>
+  <script src="/js/logout.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/html/home-page.html" target="_self">Home</a>
+        <a href="/html/login-page.html" target="_self" id="login-a">Login</a>
+        <a href="/html/login-page.html" target="_self" id="user-a">User Profile</a>
+        <a href="/html/teachers-page.html" target="_self">Our Teachers</a>
+      </div>
+    </div>
+</header>
+      <h1><span class="highlight">Welcome to the, {student} page!</span></h1>
+    <table class="user-info">
+      <tr>
+        <th>First name: </th>
+        <td id="fname"></td>
+    </tr>
+    <tr>
+        <th>Surname: </th>
+        <td id="sname"></td>
+    </tr>
+    <tr>
+        <th>Age: </th>
+        <td id="age"></td>
+    </tr>
+    <tr>
+      <th>Group: </th>
+      <td id="group"></td>
+    </tr>
+    <tr>
+      <th>Phone: </th>
+      <td id="phone"></td>
+    </tr>
+    <tr>
+      <th>E-mail: </th>
+      <td id="email"></td>
+    </tr>
+    </table>
+
+    <div class ="button-group">
+    <button id="edit-user-button" onclick="window.location.href = 'edit-user.html';">Edit User</button>
+    <button id="delete-user-button">Delete User</button>
+    <button id="marks-button" onclick="window.location.href = 'marks-page.html';">Go to Marks</button>
+    <button id="stat-button" onclick="window.location.href = 'statistict.html';" >Statistics</button>
+    </div>
+  </body> 
+</html>

@@ -1,0 +1,303 @@
+@keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #f8f9fa;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(42, 41, 41, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover, .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: #333;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #333;
+  }
+  .nav > .nav-links {
+    position: fixed;
+    display: block;
+    width: 100%;
+    background-color: #777;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+h1 {
+  color: #555;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+h1 .highlight {
+  background: linear-gradient(180deg, transparent 60%, rgba(34, 133, 255, 0.496) 60%);
+}
+
+body {
+  font-family: "Inter";
+  margin: 0;
+}
+
+label {
+  font-size: 12px;
+  opacity: .8;
+}
+
+.nav {
+  background-color: #333;
+  z-index: 10000;
+}
+
+h3 {
+  color: #777;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+h3 a {
+  text-decoration: none;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+h3 a:hover {
+  color: rgba(41, 124, 219, 0.875);
+}
+
+.form-block {
+  display: flex;
+  flex-direction: row;
+  margin: 5rem auto;
+  width: 50%;
+  height: auto;
+  background: #fefefe;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px -1px black;
+}
+
+.form-block form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 30px;
+}
+
+.form-block form .input {
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 20px 0px;
+  height: 55px;
+  min-width: 280px;
+  border: none;
+  border-bottom: solid 1px #555;
+  box-sizing: border-box;
+  transition: all .3s linear;
+}
+
+.form-block form .input:focus {
+  outline: none;
+}
+
+.form-block form .floating-label {
+  position: relative;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.form-block form .floating-label label {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.form-block form .floating-label input:not(:placeholder-shown) {
+  padding: 28px 0px 12px 0px;
+}
+
+.form-block form .floating-label input:not(:placeholder-shown) + label {
+  transform: translateY(-10px);
+  opacity: .7;
+}
+
+.form-block .left {
+  width: 220px;
+  height: auto;
+  min-height: 100%;
+  position: relative;
+  background-image: linear-gradient(rgba(41, 124, 219, 0.875), #044aa4, black);
+  background-size: cover;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.form-block .radio-buttons {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.form-block .radio-buttons label {
+  color: #333;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.form-block #show-group, .form-block #show-subject {
+  display: none;
+  padding-bottom: 1rem;
+}
+
+.form-block button {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  padding: .75rem 1.25rem;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .3s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.form-block button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 124, 219, 0.875);
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.form-block button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(23, 75, 135, 0.875);
+  transition: all .3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.form-block button:hover:before {
+  width: 100%;
+}
+
+.form-block .dropdown-content {
+  display: none;
+  z-index: 1;
+}
+
+.form-block .dropdown-content a {
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-decoration: none;
+  color: #777;
+}
+
+.form-block .dropdown-content a:visited {
+  color: #777;
+}
+
+.form-block .dropdown-content a:hover {
+  color: #333;
+}
+
+.form-block .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-block .form-block {
+    width: 80%;
+  }
+  .form-block form .input {
+    width: 100%;
+    min-width: 0;
+  }
+}

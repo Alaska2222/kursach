@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/histogram_icon.png">
+    <link rel="stylesheet" href="/scss/login-page.css">
+    <script src="/js/register.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/html/home-page.html" target="_self">Home</a>
+        <a href="/html/login-page.html" target="_self" id="login-a">Login</a>
+        <a href="/html/login-page.html" target="_self" id="user-a">User Profile</a>
+        <a href="/html/teachers-page.html" target="_self">Our Teachers</a>
+      </div>
+    </div>
+</header>
+    <div class="form-block">
+      <block class="left"></block>
+
+      <form method="#" class="log-in" autocomplete="off" name="regForm"> 
+        <h1><span class="highlight">Register page</span></h1>
+        <div class="floating-label">
+          <input class="input" placeholder="Username" type="text" name="username" id="username" autocomplete="off" >
+          <label for="username">Username:</label>
+        </div>
+        <div class="floating-label">
+          <input class="input" placeholder="Password" type="password" name="password" id="password" autocomplete="off" >
+          <label for="password">Password:</label>
+        </div>
+        <div class="floating-label">
+            <input class="input" placeholder="Confirm password" type="password" name="cpassword" id="cpassword" autocomplete="off">
+            <label for="cpassword">Password:</label>
+          </div>
+          <div class="floating-label">
+            <input class="input" placeholder="Name" type="text" name="name" id="name" autocomplete="off">
+            <label for="name">Name:</label>
+          </div>
+          <div class="floating-label">
+            <input class="input" placeholder="Surname" type="text" name="surname" id="surname" autocomplete="off">
+            <label for="surname">Surname:</label>
+          </div>
+          <div class="floating-label">
+            <input class="input" placeholder="Age" type="number" name="age" id="age" autocomplete="off">
+            <label for="age">Age:</label>
+          </div>
+          <div class="floating-label">
+            <input class="input" placeholder="E-mail" type="email" name="email" id="email" autocomplete="off"required>
+            <label for="email">E-mail:</label>
+          </div>
+          <div class="floating-label">
+            <input class="input"  placeholder="Phone" type="tel" name="phone" id="phone" autocomplete="off">
+            <label for="phone">Phone:</label>
+          </div>
+          <div class="radio-buttons">
+            <input type="radio"  id="user" name="role" class="role">
+            <label for="user" >Student</label>
+          </div>
+          <div id="show-group">
+            <div class="dropdown">
+              <input class="input" placeholder="Group:" type="text" name="group" id="group" readonly>
+              <div class="dropdown-content" >
+   
+              </div>
+            </div>
+          </div>
+            <div class="radio-buttons">
+              <input type="radio" id="admin" name="role"  class="role">
+              <label for="admin">Teaher</label>
+            </div>
+        <div  id="show-subject" >
+          <div class="dropdown">
+            <input class="input" placeholder="Subject:" type="text" name="subject" id="subject" readonly>
+            <div class="dropdown-content">
+
+            </div>
+          </div>
+          
+        </div>
+        <button type="submit" id="registrate-btn">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
